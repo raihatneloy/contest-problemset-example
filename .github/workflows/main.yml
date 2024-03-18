@@ -29,5 +29,6 @@ jobs:
         run: |
           git config --global user.name 'Bangladesh Association of Problem Setters'
           git config --global user.email 'baps-bgd@github.io'
+          git add .
           git commit -am "Generated pdf"
           git push
