@@ -20,15 +20,10 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: compiledStatement.tex
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v4
-        with:
-          name: PDF
-          path: compiledStatement.pdf
       - name: Commit generated PDF
         run: |
           git config --global user.name 'Bangladesh Association of Problem Setters'
           git config --global user.email 'baps-bgd@github.io'
           git add -f compiledStatement.pdf
-          git commit -am "Generated pdf"
+          git commit -m "Generated pdf"
           git push
